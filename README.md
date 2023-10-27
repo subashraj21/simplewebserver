@@ -15,37 +15,38 @@ Serving the HTML pages.
 Testing the webserver
 
 ## PROGRAM:
-    from http.server import HTTPServer, BaseHTTPRequestHandler
-    content = """
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <title>My webserver</title>
-    </head>
-    <body>
-    <h1>Top 5 Revenue Generating Companies<h1>
-    <UL TYPE=“circle”>
-    <LI> Flipkart </LI>    
-    <LI> SBI </LI>
-    <LI> Infosys </LI>
-    <LI> Rahul an Co </LI>
-    <LI> ITC </LI>
-    </UL>
-    </body>
-    </html>
-    """
-    class myhandler(BaseHTTPRequestHandler):
-        def do_GET(self):
-            print("request received")
-            self.send_response(200)
-            self.send_header('content-type', 'text/html; charset=utf-8')
-            self.end_headers()
-            self.wfile.write(content.encode())
-    server_address = ('',8000)
-    httpd = HTTPServer(server_address,myhandler)
-    print("my webserver is running...")
-    httpd.serve_forever()
-
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webserver</title>
+</head>
+<body>
+    <h1>Top 5 Revenue Companies</h1>
+    <ol>
+        <li>Flipkart</li>
+        <li>SBI/li>
+        <li>Infosys</li>
+        <li>Rahul and co</li>
+        <li>ITC</li>
+    </ol>
+</body>
+</html>
+"""
+class myhandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("request received")
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+server_address = ('',8080)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
+```
 ## OUTPUT:
 ![image](https://github.com/rahulramakrishnann/Exp1-simple-web-server/assets/143045415/23bc2003-3163-4348-8eec-9d3de95edaf0)
 
