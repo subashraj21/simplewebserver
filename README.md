@@ -47,9 +47,9 @@ print("my webserver is running...")
 httpd.serve_forever()
 ```
 ## OUTPUT:
-![image](https://github.com/rahulramakrishnann/Exp1-simple-web-server/assets/143045415/23bc2003-3163-4348-8eec-9d3de95edaf0)
+![WhatsApp Image 2024-09-24 at 5 45 05 PM](https://github.com/user-attachments/assets/9e2957fd-6bac-4608-b663-4e38fbc4b5d9)
+![WhatsApp Image 2024-09-24 at 5 45 05 PM (1)](https://github.com/user-attachments/assets/d12f81cf-83b3-4902-bfbb-354ba3348104)
 
-![image](https://github.com/rahulramakrishnann/Exp1-simple-web-server/assets/143045415/93eb801d-48a2-4129-bef0-390888641121)
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
